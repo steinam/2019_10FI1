@@ -1,0 +1,58 @@
+
+Weitergehende Fragen
+
+    Was ist der Unterschied zwischen einem JIT-Compiler und einem AOT-Compiler
+    Warum heißt der Java-Compiler Hotspot-Compiler
+    Compiliert ein Compiler immer den kompletten Quellcode ?
+    Kann ein kompiliertes Java-Programm schneller sein als ein kompiliertes C++ - Programm.
+    Wie muss man sich vorstellen, dass zur Laufzeit nur die Methoden kompiliert werden, die gerade benötigt werden ? Was passiert mit den nicht benötigten Methoden ?
+    Welche Vorteile haben dynamische Kompilierung im Vergleich zu statischer Kompilierung
+    Eine Optimierung zur Erhöhung der Geschwindigkeit ist das sog. Inlining. Was versteht man darunter ?
+    Welche Aufgabe übernimmt das Tool ngen.exe im .net-Framework
+    Bringen Sie die folgende Begriffe des .NET-Frameworks „Quellcode - CIL-Code und CLR“ in einen Zusammenhang
+    Erläutern Sie den Begriff Assembly sowie DLL-Hölle
+
+Antworten zu weitergehenden Fragen
+
+Zu den potentiellen Optimierungen zählen unter anderem: Konstantenfaltung - Vorauswertung statischer Ausdrücke Loop Invariant Code Motion - Herausziehen iterationsunabhängiger Berechnungen aus Schleifen Loop Unrolling - Entfalten von Schleifen Dead Code Elimination - Entfernen von nicht benötigtem Code Polymorphic Inline Caching - Vorhalten der Adressen von aufgerufenen Methoden in einem Cache Maps - Teilen von Typinformationen ähnlicher Objekte [2] Da einem JIT-Compiler zusätzlich Laufzeit-Informationen zur Verfügung stehen, kann er Closed-World-Annahmen treffen. Daher ergeben sich gegenüber dem AOT-Compiler noch weitere Optimierungsmöglichkeiten: Benutzen der gesammelten Typinformationen in den Polymorphic Inline Caches, um spezialisierte Versionen der aufgerufenen Methoden zu kompilieren[3] Runtime Type Feedback - Sammeln von Typinformationen zur Ausführungszeit mit denen der ausgeführte Code optimiert werden kann. [4] Maps - Beschleunigung des Nachschlagens von Attributen [2] Ein JIT-Compiler kann auch Dynamische Optimierungen erkennen und durchführen.
+Links
+
+http://de.wikipedia.org/wiki/Just-in-time-Kompilierung#Abgrenzung_zu_Ahead-of-time-Kompilation
+
+http://www.techrepublic.com/article/net-compilation-demystified/1045142
+
+http://www.google.de/imgres?num=10&hl=de&biw=1366&bih=607&tbm=isch&tbnid=uFeeE5peO1KGSM:&imgrefurl=http://www.ibm.com/developerworks/java/library/j-rtj2/index.html&docid=aVm3K0jDBXKSwM&imgurl=http://www.ibm.com/developerworks/java/library/j-rtj2/jvmjit.gif&w=532&h=338&ei=kQCIUIWfCM73sgaI4oDoAg&zoom=1&iact=rc&dur=2&sig=108337920440919811572&page=1&tbnh=127&tbnw=200&start=0&ndsp=19&ved=1t:429,r:1,s:0,i:72&tx=521&ty=241
+
+http://www.ibm.com/developerworks/views/java/libraryview.jsp?search_by=Real+time+Java+Part
+
+http://msdn.microsoft.com/de-de/library/ht8ecch6%28v=vs.90%29.aspx
+
+http://en.wikipedia.org/wiki/Common_Language_Runtime
+
+http://www.codeguru.com/csharp/.net/net_general/toolsand3rdparty/article.php/c4651/JIT-Compilation-and-Performance–To-NGen-or-Not-to-NGen.htm
+
+http://de.wikipedia.org/wiki/Just-in-time-Kompilierung
+
+http://stackoverflow.com/questions/95635/what-does-a-just-in-time-jit-compiler-do
+
+http://tirania.org/blog/archive/2012/Apr-04.html
+
+http://www.codeproject.com/Articles/25801/JIT-Optimizations
+
+http://msdn.microsoft.com/de-de/magazine/cc163791%28en-us%29.aspx
+
+http://blogs.msdn.com/b/vancem/archive/2006/03/13/550529.aspx
+
+http://www.artima.com/intv/choicesP.html
+
+Assemblies:
+
+http://msdn.microsoft.com/de-de/library/bb979301.aspx
+
+Geschwindigkeit:
+
+http://www.codeproject.com/Articles/212856/Head-to-head-benchmark-Csharp-vs-NET
+Lösungen
+
+    Warum heißt der Java-Compiler Hotspot-Compiler:
+
