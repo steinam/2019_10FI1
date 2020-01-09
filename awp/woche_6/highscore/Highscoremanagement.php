@@ -6,8 +6,8 @@ class Highscoremanagement{
 
     private $Highscoretable;
 
-    public function __construct(int $Length){
-        $this->Highscoretable = array($Length);
+    public function __construct(){
+        $this->Highscoretable = array();
     }
 
     public function addEntry(Entry $e){
@@ -16,18 +16,21 @@ class Highscoremanagement{
             $this->Highscoretable[] = $e;
         }
         else{
-            echo("Vor dem Erstzen");
+            echo("Vor dem Ersetzen");
             var_dump($this->Highscoretable);
 
             $this->sort();
-            
+
             echo("Nach dem Erstzen");
             var_dump($this->Highscoretable);
 
 
+            $entry = $this->Highscoretable[9];
+
+
             if(($this->Highscoretable[9])->getPoint() < $e->getPoint()){
 
-                $this->Highscoretable[9]= $e; 
+                $this->Highscoretable[9]= $e;
             }
         }
     }

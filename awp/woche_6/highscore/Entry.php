@@ -6,18 +6,16 @@
 
         private $Name;
         private $Point;
-        
+
 
         public function __construct($point, string $n){
 
                 $this->Name = $n;
                 $this->Point = $point;
         }
-        
 
-        public function setName(string $n){
-            $this->Name = $n;
-        }
+
+      
 
         public function getPoint():int
         {
